@@ -1,0 +1,32 @@
+# do the following:
+sudo apt update
+sudo apt install cmake
+sudo apt install libsodium-dev
+sudo apt install libopus-dev
+sudo apt install git
+
+# now grab c-toxcore (tip)
+cd
+mkdir tox
+cd tox
+git pull https://github.com/TokTok/c-toxcore
+cd c-toxcore
+mkdir _build
+cd _build
+cmake ..
+make -j 4
+sudo make install
+
+# now for my crap bot (you'll have to download it if you don't already
+# have it).  You should ONLY hgave server_bot3.cpp
+
+g++ -Wall -g -o server_bot server_bot3.cpp -lsodium -I /usr/local/include/ -ltoxcore
+./server_bot
+
+# now it will be running.  It will print out the (newly generated) tox_id
+# when it starts.  Once it creates a tox_id (that's in the file savedata.tox)
+# it will use the same tox_id no matter how often you restart it.
+#
+# be careful not to run two instances at the same time.  If you do, the
+# bot will seem to be going up and down all the time, and you may corrupt
+# the savedata.tox file.
