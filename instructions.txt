@@ -7,18 +7,19 @@ sudo apt install git
 
 # now grab c-toxcore (tip)
 cd
-mkdir tox
-cd tox
+mkdir -p development/tox && cd development/tox
 git pull https://github.com/TokTok/c-toxcore
-cd c-toxcore
-mkdir _build
-cd _build
+cd c-toxcore *&& mkdir _build && cd _build
 cmake ..
 make -j 4
 sudo make install
+cd
+mkdir -p development/bot && cd development/bot 
 
 # now for my crap bot (you'll have to download it if you don't already
-# have it).  You should ONLY hgave server_bot3.cpp
+# have it).  You should ONLY hgave server_bot3.cpp.  You probably want
+# to have a "development" directory or something to place the code in.
+# place it in the directory ~development/bot
 
 g++ -Wall -g -o server_bot server_bot3.cpp -lsodium -I /usr/local/include/ -ltoxcore
 ./server_bot
