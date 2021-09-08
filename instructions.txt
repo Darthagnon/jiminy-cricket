@@ -1,9 +1,9 @@
 # do the following:
-sudo apt update
-sudo apt install cmake
-sudo apt install libsodium-dev
-sudo apt install libopus-dev
-sudo apt install git
+sudo apt -y update
+sudo apt -y install cmake
+sudo apt -y install libsodium-dev
+sudo apt -y install libopus-dev
+sudo apt -y install git
 
 # now grab c-toxcore (tip)
 cd && mkdir -p development/tox && cd development/tox
@@ -12,12 +12,12 @@ cd c-toxcore && mkdir _build && cd _build
 cmake ..
 make -j 4
 sudo make install
-cd && mkdir -p development/bot && cd development/bot 
+cd && mkdir -p development/tox/bot && cd development/tox/bot 
 
 # now for my crap bot (you'll have to download it if you don't already
-# have it).  You should ONLY hgave server_bot3.cpp.  You probably want
+# have it).  You should ONLY hgave server_bot.cpp.  You probably want
 # to have a "development" directory or something to place the code in.
-# place it in the directory ~development/bot
+# place it in the directory ~development/tox/bot
 
 export LD_LIBRARY_PATH=/usr/local/lib/
 g++ -Wall -g -o server_bot server_bot3.cpp -lsodium -I /usr/local/include/ -ltoxcore
@@ -37,3 +37,12 @@ g++ -Wall -g -o server_bot server_bot3.cpp -lsodium -I /usr/local/include/ -ltox
 # will allow it to start, and it will dump output to a file.  You can log
 # out of the pi and it will continue to run.  You can use "pkill" to kill
 # an instance that is running.
+
+# https://www.valgrind.org/
+# https://www.valgrind.org/docs/manual/manual.html
+# ------------------------------------------------
+# You'll probably want to learn about Valgrind, callgrind, kcachegrind, and
+# other linux debug tools.  They are very powerful for understanding how
+# a program works, and why it crashes.
+
+# may want to look at gprof
