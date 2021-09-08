@@ -15,17 +15,9 @@ Build instructions and dependencies in ```instructions.txt```, code in ```server
 ## Project history
 Project started by a friend I met via a groupchat on the [Tox Directory](https://tox.directory/) on [qTox](https://qtox.github.io/).
 
-He doesn't seem to think much of Cricket:
+Warning from Cricket's creator:
 >Friend: remember, the bot is ONLY a proof of concept.
->
->Friend: it's crap, but it will show you how to work with the tox library.
->
->Friend: I probably should write up man pages for it.
->
->Friend: I don't care, it's junk.
->
->Friend: I don't want credit, the code is embarassing.
 
-I will be trying to learn C/C++ development with this project.
+I will be using this project to make Tox more useable and to learn C/C++ development.
 
 Last updated: 08 Sept 2021 (README.md), 09 Aug 2021 (code), 10 Aug 2021 (instructions.txt)
