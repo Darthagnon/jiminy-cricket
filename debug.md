@@ -24,3 +24,10 @@ and run this
 make
 sudo make install
 ```
+
+## Valgrind
+https://valgrind.org/downloads/
+
+you can get it with: ```wget https://sourceware.org/pub/valgrind/valgrind-3.17.0.tar.bz2```
+
+then you can uncompress it with ```tar -xf valgrind-3.17.0.tar.bz2```
