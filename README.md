@@ -1,5 +1,5 @@
 # jiminy-cricket
-Cricket: An always-online and file-sharing bot for the P2P Tox protocol.
+Cricket: An always-online and file-sharing bot for the P2P [Tox](https://tox.chat/) protocol.
 
 ## Usage
 Build instructions and dependencies in ```instructions.txt```, code in ```server_bot3.cpp```. Works on Raspberry Pi.
