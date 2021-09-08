@@ -31,3 +31,13 @@ https://valgrind.org/downloads/
 you can get it with: ```wget https://sourceware.org/pub/valgrind/valgrind-3.17.0.tar.bz2```
 
 then you can uncompress it with ```tar -xf valgrind-3.17.0.tar.bz2```
+
+```
+cd ~/development
+  wget https://sourceware.org/pub/valgrind/valgrind-3.17.0.tar.bz2
+  tar -xf valgrind-3.17.0.tar.bz2
+  cd valgrind-3.17.0
+  ./configure
+  make -j 4
+  sudo make install
+```
