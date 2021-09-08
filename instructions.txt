@@ -6,21 +6,20 @@ sudo apt install libopus-dev
 sudo apt install git
 
 # now grab c-toxcore (tip)
-cd
-mkdir -p development/tox && cd development/tox
-git pull https://github.com/TokTok/c-toxcore
-cd c-toxcore *&& mkdir _build && cd _build
+cd && mkdir -p development/tox && cd development/tox
+git clone https://github.com/TokTok/c-toxcore
+cd c-toxcore && mkdir _build && cd _build
 cmake ..
 make -j 4
 sudo make install
-cd
-mkdir -p development/bot && cd development/bot 
+cd && mkdir -p development/bot && cd development/bot 
 
 # now for my crap bot (you'll have to download it if you don't already
 # have it).  You should ONLY hgave server_bot3.cpp.  You probably want
 # to have a "development" directory or something to place the code in.
 # place it in the directory ~development/bot
 
+export LD_LIBRARY_PATH=/usr/local/lib/
 g++ -Wall -g -o server_bot server_bot3.cpp -lsodium -I /usr/local/include/ -ltoxcore
 ./server_bot
 
@@ -31,3 +30,10 @@ g++ -Wall -g -o server_bot server_bot3.cpp -lsodium -I /usr/local/include/ -ltox
 # be careful not to run two instances at the same time.  If you do, the
 # bot will seem to be going up and down all the time, and you may corrupt
 # the savedata.tox file.
+#
+# And REMEMBER although this seems like it works, it's a mess.
+
+# you can use "nohup" to run the bot in the background if you like, this
+# will allow it to start, and it will dump output to a file.  You can log
+# out of the pi and it will continue to run.  You can use "pkill" to kill
+# an instance that is running.

@@ -17,9 +17,13 @@ Project started by a friend I met via a groupchat on the [Tox Directory](https:/
 
 He doesn't seem to think much of Cricket:
 >Friend: remember, the bot is ONLY a proof of concept.
+>
 >Friend: it's crap, but it will show you how to work with the tox library.
+>
 >Friend: I probably should write up man pages for it.
+>
 >Friend: I don't care, it's junk.
+>
 >Friend: I don't want credit, the code is embarassing.
 
 I will be trying to learn C/C++ development with this project.
